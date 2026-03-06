@@ -90,7 +90,7 @@ export default function PolicyPreview({ data, isComplete }) {
   )
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col flex-1 min-h-0">
       {/* Header with stats and actions */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
         <div className="flex items-center gap-4 text-xs text-galactic">
@@ -120,7 +120,7 @@ export default function PolicyPreview({ data, isComplete }) {
 
       {/* Document preview */}
       <div
-        className="flex-1 overflow-y-auto bg-oblivion/50 border border-metal/20 rounded-xl p-4 sm:p-6"
+        className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden bg-oblivion/50 border border-metal/20 rounded-xl p-4 sm:p-6"
         aria-live="polite"
         role="region"
         aria-label="Privacy policy preview"
@@ -144,7 +144,7 @@ export default function PolicyPreview({ data, isComplete }) {
                 <h3 className="text-base font-semibold text-white">
                   {i + 1}. {section.title}
                 </h3>
-                <div className="text-sm text-cloudy leading-relaxed whitespace-pre-line">
+                <div className="text-sm text-cloudy leading-relaxed whitespace-pre-line break-words">
                   {section.content}
                 </div>
               </div>

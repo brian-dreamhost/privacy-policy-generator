@@ -85,7 +85,7 @@ body {
 /* Purple glow background effect */
 .bg-glow {
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .bg-glow::before {
